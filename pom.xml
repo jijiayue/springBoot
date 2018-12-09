@@ -6,7 +6,7 @@
 	<groupId>com.example</groupId>
 	<artifactId>demo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
 	<name>demo</name>
 	<description>Demo project for Spring Boot</description>
@@ -28,6 +28,13 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+			<!--部署tomcat需要的去掉的内部镶嵌的-->
+			<!--<exclusions>-->
+				<!--<exclusion>-->
+					<!--<groupId>org.springframework.boot</groupId>-->
+					<!--<artifactId>spring-boot-starter-tomcat</artifactId>-->
+				<!--</exclusion>-->
+			<!--</exclusions>-->
 		</dependency>
 
 		<dependency>
@@ -40,9 +47,26 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-freemarker</artifactId>
 		</dependency>
+		<!-- servlet支持包 -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- tomcat支持包 -->
+		<!-- 打war包 部署tomacat 外部支持的 -->
+		<!--<dependency>-->
+			<!--<groupId>org.springframework.boot</groupId>-->
+			<!--<artifactId>spring-boot-starter-tomcat</artifactId>-->
+			<!--<version>7.0.42</version>-->
+			<!--<scope>compile </scope>-->
+		<!--</dependency>-->
+
 	</dependencies>
 
 	<build>
+		<finalName>springBoot</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

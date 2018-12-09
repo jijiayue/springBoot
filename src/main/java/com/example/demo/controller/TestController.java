@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
@@ -14,10 +15,10 @@ public class TestController {
 
     @RequestMapping("/home")
     @ResponseBody
-    public ModelAndView hellWord(){
+    public ModelAndView hellWord(@RequestParam(value = "name",required = false) String name){
         ModelAndView mode = new ModelAndView();
-        mode.addObject("name", "zhangsan");
-        mode.setViewName("index.html");
+        mode.addObject("name", name);
+        mode.setViewName("index");
         return mode;
     }
 }

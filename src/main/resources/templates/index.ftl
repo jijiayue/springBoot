@@ -5,8 +5,11 @@
     <title>Title</title>
 </head>
 <body>
-    hello world!!!
-    name=${name } welcome!
 
+   <#if (name)??>
+    ${name } welcome!
+   <#else>
+    hello world!!!
+   </#if>
 </body>
 </html>

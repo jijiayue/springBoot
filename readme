@@ -1,1 +1,3 @@
-1
+1、war包部署taomact
+   1）idea的jdk要和tomcat运行环境jdk一致，或者低于omcat运行环境jdk
+   2）tomcat和jdk有版本匹配

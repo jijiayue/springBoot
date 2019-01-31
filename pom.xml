@@ -59,8 +59,8 @@
 		<!--<dependency>-->
 			<!--<groupId>org.springframework.boot</groupId>-->
 			<!--<artifactId>spring-boot-starter-tomcat</artifactId>-->
-			<!--<version>7.0.42</version>-->
-			<!--<scope>compile </scope>-->
+			<!--<version>7.0.92</version>-->
+			<!--<scope>provided</scope>-->
 		<!--</dependency>-->
 
 	</dependencies>
